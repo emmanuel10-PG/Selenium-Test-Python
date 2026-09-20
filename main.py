@@ -5,15 +5,17 @@
 import this
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def print_identifiant():
+    # afficher les information d une personnes
+    nom ='ZADI'
+    prenom = 'ASSA LAGE'
+    proffession ='informaticien'
+    localite = 'Abidjan, Ivory Coast'
+    print("Informations : "+nom+" "+ prenom +" "+ proffession+" "+localite+" ")
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    a = 1
-    ## print_hi('test')
-    print(print_hi('test'),a )
+    print_identifiant()
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
