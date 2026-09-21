@@ -52,4 +52,7 @@ if __name__ == '__main__':
     print("\n")
     print_dictionnaire_donnee()
 
+    ## installation de selenium
+    # commande pip install selenium
+
 
