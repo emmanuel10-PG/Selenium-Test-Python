@@ -15,13 +15,30 @@ driver = webdriver.Chrome(service=servicewd)
 driver.get("https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal")
 
 print(driver.title)
-iconSearch = driver.find_element(By.XPATH,"//*[@id='p-search']/a").click()
+
+
+
+# methode 1
+#iconSearch = driver.find_element(By.XPATH,"//*[@id='p-search']/a").click()
+
+# methode 2
+iconSearch = driver.find_element(By.CSS_SELECTOR,"#p-search > a").click()
 elemntSearch = driver.find_element(By.NAME, "search")
 elemntSearch.send_keys("python")
 elemntSearch.submit()
+# maximisez la page (agrandir au maximum la page)
+driver.maximize_window()
 
+driver.get_screenshot_as_file("img1.png")
+driver.get_window_size()
 time.sleep(7)
 
+
+
+# le site continue sur le meme onglet
+driver.get("https://www.ubuntu-fr.org/")
+elemntDoc = driver.find_element(By.XPATH, "/html/body/header/div[2]/nav/a[2]").click()
+time.sleep(7)
 
 driver.quit()
 
